@@ -1,0 +1,274 @@
+
+:root {
+    --primary: #003366; /* USIU blue */
+    --primary-light: #3d5f8f;
+    --secondary: #ff6600; /* USIU orange */
+    --secondary-light: #ff8c42;
+    --background: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #333333;
+    --text-light: #666666;
+    --border: #e0e0e0;
+    --success: #28a745;
+    --warning: #ffc107;
+    --error: #dc3545;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Calculator Container */
+.calculator-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.calculator-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+.calculator-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.subtitle {
+    margin: 0.5rem 0 0;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Grade Scale */
+.grade-scale {
+    padding: 1rem 2rem;
+    background-color: rgba(0, 51, 102, 0.05);
+    border-bottom: 1px solid var(--border);
+}
+
+.grade-scale h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+.scale-list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.scale-list li {
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+.gpa-form {
+    padding: 1.5rem 2rem;
+}
+
+.course-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.course-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.course-row input, 
+.course-row select {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.course-row input:focus, 
+.course-row select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(0, 51, 102, 0.2);
+}
+
+.course-row input {
+    min-width: 200px;
+}
+
+.course-row select {
+    min-width: 100px;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: var(--error);
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: var(--transition);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.remove-btn:hover {
+    opacity: 1;
+    background: rgba(220, 53, 69, 0.1);
+}
+
+/* Button Styles */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-btn {
+    background-color: var(--background);
+    color: var(--primary);
+    border: 1px dashed var(--primary);
+}
+
+.add-btn:hover {
+    background-color: rgba(0, 51, 102, 0.05);
+    border-style: solid;
+}
+
+.add-btn span {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.calculate-btn {
+    background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+    color: white;
+    flex: 1;
+}
+
+.calculate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 102, 0, 0.3);
+}
+
+/* Results Section */
+.result-container {
+    padding: 1.5rem 2rem;
+    background-color: rgba(40, 167, 69, 0.05);
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.result-container h2 {
+    margin: 0 0 1rem;
+    color: var(--primary);
+}
+
+.gpa-display {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gpa-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.gpa-label {
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+.gpa-message {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .calculator-container {
+        margin: 1rem;
+    }
+    
+    .calculator-header,
+    .grade-scale,
+    .gpa-form,
+    .result-container {
+        padding: 1rem;
+    }
+    
+    .course-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .add-btn,
+    .calculate-btn {
+        width: 100%;
+    }
+}
