@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USIU-Africa GPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Calculate your GPA for USIU-Africa courses">
+</head>
+<body>
+    <main class="calculator-container">
+        <header class="calculator-header">
+            <h1>USIU-Africa GPA Calculator</h1>
+            <p class="subtitle">Estimate your semester GPA before official results</p>
+        </header>
+
+        <div class="grade-scale">
+            <h2>Grade Scale</h2>
+            <ul class="scale-list">
+                <li>A = 4.0</li>
+                <li>B = 3.0</li>
+                <li>C = 2.0</li>
+                <li>D = 1.0</li>
+                <li>F = 0.0</li>
+            </ul>
+        </div>
+
+        <form id="gpa-form" class="gpa-form">
+            <div id="course-rows" class="course-rows">
+                <!-- Initial course rows will be added by JavaScript -->
+            </div>
+
+            <div class="form-actions">
+                <button type="button" id="add-course" class="btn add-btn">
+                    <span>+</span> Add Another Course
+                </button>
+                <button type="submit" id="calculate" class="btn calculate-btn">
+                    Calculate GPA
+                </button>
+            </div>
+        </form>
+
+        <div id="result-container" class="result-container hidden">
+            <h2>Your GPA Result</h2>
+            <div class="gpa-display">
+                <span id="gpa-value" class="gpa-value">0.00</span>
+                <span class="gpa-label">GPA</span>
+            </div>
+            <p id="gpa-message" class="gpa-message"></p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
