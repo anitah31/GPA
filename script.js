@@ -1,7 +1,4 @@
-/**
- * USIU-Africa GPA Calculator
- * A simple tool to calculate semester GPA based on course grades
- */
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // DOM Elements
